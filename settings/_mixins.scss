@@ -1,0 +1,77 @@
+@mixin is-pc {
+  @media screen and (min-width: #{$breakpoint}px) {
+    @content;
+  }
+}
+
+@mixin is-sp {
+  @media screen and (max-width: #{$breakpoint - 1}px) {
+    @content;
+  }
+}
+
+@mixin absolute-center-x {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin absolute-center-y {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+@mixin flex($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin grid($cols: 2, $align: center) {
+  display: grid;
+  align-items: $align;
+  grid-template-columns: repeat($cols, minmax(0, 1fr));
+}
+
+@mixin pseudo {
+  content: "";
+  position: absolute;
+}
+
+@mixin object-fit($val: cover) {
+  width: 100%;
+  height: 100%;
+  object-fit: $val;
+}
+
+@mixin line-clamp($val: 1) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $val;
+}
+
+@mixin indent {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+@mixin gradient($color1, $color2, $direction: right) {
+  background: linear-gradient(to $direction, $color1, $color2);
+}
+
+@mixin shadow($hoff:0, $voff: 3px, $blur: 6px, $alpha:.16, $color:#000) {
+  box-shadow: $hoff $voff $blur rgba($color, $alpha);
+}
+
+@mixin filter-shadow($hoff:0, $voff: 3px, $blur: 6px, $alpha:.16, $color:#000) {
+  filter: drop-shadow($hoff $voff $blur rgba($color, $alpha));
+}

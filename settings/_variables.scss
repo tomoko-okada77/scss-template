@@ -1,0 +1,21 @@
+$breakpoint: 1240;
+$innerWidth: 1020;
+$spGutter: 20;
+
+$colors: (
+  primary: #004898,
+  secondary: #B21E23,
+  dark:#000,
+  accent: #448aaf,
+  divider: #bdbdbd,
+  error: #f00,
+  background: #eee,
+);
+
+$z-index: (
+  modal: 10,
+  header: 9,
+  dropdown: 8,
+  nav: 7,
+  floatBar: 6
+)

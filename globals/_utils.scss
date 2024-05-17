@@ -1,0 +1,23 @@
+@each $key, $value in $colors {
+  .bg-#{$key} {
+    background: $value;
+  }
+}
+
+@each $key, $value in $colors {
+  .color-#{$key} {
+    color: $value;
+  }
+}
+
+@for $i from 10 through 24 {
+  .text-#{$i} {
+    font-size: $i * 1px;
+  }
+}
+
+@for $i from 12 through 18 {
+  .leading-#{$i} {
+    line-height: $i * 0.1;
+  }
+}

@@ -1,0 +1,57 @@
+.inner {
+  max-width: #{$innerWidth}px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include is-sp {
+    max-width: calc(100vw - #{$spGutter}px);
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+@include is-sp {
+  .only-pc {
+    display: none;
+  }
+}
+
+@include is-pc {
+  .only-sp {
+    display: none;
+  }
+}

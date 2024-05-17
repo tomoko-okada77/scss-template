@@ -1,0 +1,19 @@
+@function shadow($value) {
+  @return map-get($shadow, $value);
+}
+
+@function size($value) {
+  @return map-get($size-text, $value);
+}
+
+@function color($key) {
+  @return map-get($colors, $key);
+}
+
+@function z-index($value) {
+  @return map-get($z-index, $value);
+}
+
+@function lh($fontSize, $lines) {
+  @return $lines / $fontSize;
+}
